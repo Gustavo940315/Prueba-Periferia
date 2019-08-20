@@ -1,0 +1,7 @@
+{
+  "name": "PruebaPeriferiaGustavoFlorez",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

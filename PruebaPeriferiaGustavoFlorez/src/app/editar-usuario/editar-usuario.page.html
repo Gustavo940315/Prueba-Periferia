@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Usuario</ion-title>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref="/" ></ion-back-button>
+  </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <form >
+          <ion-item>
+              <ion-label position="floating">Nombres</ion-label>
+              <ion-input type="text"  [(ngModel)]="nombres" name="nombres" minlength="2" maxlength="100" required value="{{usuario.nombres}}"> </ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Apellidos</ion-label>
+              <ion-input type="text"  [(ngModel)]="apellidos" name="apellidos" minlength="1" maxlength="100" required value="{{usuario.apellidos}}"></ion-input>
+          </ion-item>
+            <ion-item>
+              <ion-label text-right>Numero de identificación: </ion-label>
+              <ion-label  text-right>{{usuario.numeroIdentificacion}}</ion-label>
+            </ion-item>
+            <ion-item >
+                  <ion-label position="floating">Teléfono</ion-label>
+                  <ion-input type="number"  [(ngModel)]="telefono" name="telefono" minlength="2" maxlength="50" required value="{{usuario.telefono}}"></ion-input>
+              </ion-item>
+                 <ion-item >
+                  <ion-label position="floating">Dirección</ion-label>
+                  <ion-input type="text"  [(ngModel)]="direccion" name="direccion" minlength="1" maxlength="90" required value="{{usuario.direccion}}"></ion-input>
+              </ion-item>
+            </form>
+    </ion-list>
+    <ion-button expand="block" type="submit" color="primary" 
+            (click)="ServicioEditarUsuario()">Editar</ion-button>
+
+</ion-content>

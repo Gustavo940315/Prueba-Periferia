@@ -1,0 +1,10 @@
+CREATE TABLE usuario (
+    usuario_id       INT  NOT NULL auto_increment PRIMARY KEY COMMENT 'Llave primaria',
+    nombres   	     VARCHAR(100) COMMENT  'nombres del usuario',
+    apellidos        VARCHAR(400) COMMENT 'apellidos usuarios',
+    numero_identificacion INT  COMMENT 'numero identificacion del usuario', 
+    telefono		 VARCHAR(15) COMMENT  'numero de contacto usuario',
+    direccion		 VARCHAR(50) COMMENT  'direccion de lugar donde vive',
+    fecha_creacion   DATE COMMENT 'Fecha de creacion',
+    fecha_ultima_modificacion   DATE COMMENT 'fecha ultima modificacion registro'
+);

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listado Usuarios</ion-title>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref="/" ></ion-back-button>
+  </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content fullscreen>
+        <ion-button color="primary" (click)="consultarUsuario(usuario)">Actualizar</ion-button>
+        <ion-list *ngFor="let usuario of usuarios"> 
+            <ion-list-header>
+                {{usuario.nombres}} {{usuario.apellidos}}
+            </ion-list-header>
+            <ion-item>
+                <ion-label>
+                  <h2> Numero Identificacion  : {{usuario.numeroIdentificacion}} </h2>
+                  <h3> Telefono : {{usuario.telefono}}</h3>
+                  <h3> Direccion : {{usuario.direccion}}</h3>
+                  <ion-button color="primary" (click)="editarUsuario(usuario)">Editar</ion-button>
+                  <ion-button color="primary" (click)="eliminarUsuario(usuario)" >Eliminar</ion-button>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+        <br>
+        <br>
+        <h5>Para actualizar la informacion debe seleccionar el boton "Actualizar"</h5>
+    </ion-content>
+    
+</ion-content>
